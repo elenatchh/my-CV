@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elena Fontaine</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+	<header>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+    <header class="hero">
+        <h1>Elena Fontaine</h1>
+        <p>Web Developer & UX/UI Designer</p>
+        <button onclick="scrollToSection('contact')">Contact Me</button>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Passionate web developer with a strong background in UX/UI design and 2 years of professional experience. Always eager to create user-centered and visually compelling digital experiences.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="card">
+                    <h3>HTML & CSS</h3>
+                    <p>Building responsive and accessible websites.</p>
+                </div>
+                <div class="card">
+                    <h3>JavaScript</h3>
+                    <p>Creating interactive and dynamic user experiences.</p>
+                </div>
+                <div class="card">
+                    <h3>UX/UI Design</h3>
+                    <p>Wireframing, prototyping, and user research.</p>
+                </div>
+                <div class="card">
+                    <h3>React</h3>
+                    <p>Developing scalable front-end applications.</p>
+                </div>
+            </div>
+        </section>
+
+		<section id="graduation">
+            <h2>Graduations</h2>
+            <div class="skills">
+                <div class="card">
+                    <h3>42</h3>
+                    <p>I've been at 42 school for one year after did 2 "piscines"</p>
+                </div>
+                <div class="card">
+                    <h3>Konexio</h3>
+                    <p>I've been for 1 year and half at Konexio's schooln learning web programation and work on a compagny</p>
+                </div>
+                <div class="card">
+                    <h3>UX/UI Design</h3>
+                    <p>Wireframing, prototyping, and user research.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="card">
+                    <h3>Portfolio Website</h3>
+                    <p>A sleek portfolio showcasing my best work.</p>
+                </div>
+                <div class="card">
+                    <h3>E-commerce Platform</h3>
+                    <p>Developed a custom online store with enhanced UX features.</p>
+                </div>
+                <div class="card">
+                    <h3>My design system</h3>
+                    <p>Built an admin dashboard with dynamic charts and reports.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
