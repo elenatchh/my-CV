@@ -30,3 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+document.getElementById("download-pdf").addEventListener("click", function () {
+    const { jsPDF } = window.jspdf;
+
+    html2canvas(document.body, { scale: 2 }).then(canvas => {
+        const imgData = canvas.toDataURL("image/png");
+        const pdf = new jsPDF("p", "mm", "a4");
+        const imgWidth = 210; // Largeur du PDF (A4)
+        const imgHeight = (canvas.height * imgWidth) / canvas.width; // Hauteur proportionnelle
+
+        pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+        pdf.save("CV_Erin.pdf");
+    });
+});

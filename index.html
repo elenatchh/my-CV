@@ -16,6 +16,7 @@
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><button id="theme-toggle">🌙</button></li>
+				<button id="download-pdf">Télécharger en PDF</button>
             </ul>
         </nav>
     </header>
@@ -109,5 +110,8 @@
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
     </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script src="script.js"></script> <!-- Ton fichier JS -->	
 </body>
 </html>
