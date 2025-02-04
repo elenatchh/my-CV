@@ -43,3 +43,7 @@ document.getElementById("download-pdf").addEventListener("click", function () {
         pdf.save("CV_Erin.pdf");
     });
 });
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('open');
+});
