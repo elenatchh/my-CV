@@ -21,6 +21,7 @@ nav ul {
 	gap: 20px;
 	list-style: none;
 	padding: 0;
+	transition: transform 0.3s ease-in-out;
 }
 
 nav ul li a {
@@ -45,6 +46,19 @@ nav ul li a:hover {
 	cursor: pointer;
 	color: #fff;
 }
+/* Menu Toggle */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
+}
 /* Responsive Navigation */
 @media (max-width: 768px) {
     nav ul {
@@ -54,6 +68,23 @@ nav ul li a:hover {
     }
 	nav ul li {
         justify-content: center;
+    }
+	#menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 200px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        transform: translateX(100%);
     }
 }
 
