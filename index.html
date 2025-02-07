@@ -6,31 +6,34 @@
     <title>Elena Fontaine</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
 </head>
 <body>
 	<header>
         <nav>
-            <ul>
-				<button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-links" class="hidden">
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><button id="theme-toggle">🌙</button></li>
-				<li>
-					<button id="download-pdf" class="download-btn">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							<path d="M12 16l4-5h-3V4h-2v7H8l4 5zm6 2v2H6v-2H4v4h16v-4h-2z"/>
-						</svg>
-					</button>
-				</li>				
+                <li>
+                    <button id="download-pdf" class="download-btn" aria-label="Download CV">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 16l4-5h-3V4h-2v7H8l4 5zm6 2v2H6v-2H4v4h16v-4h-2z" />
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
-	
     <header class="hero">
 		<div class="hero-content">
-			<img src="images/photo3.JPG" alt="Photo de profil" class="profile-photo" />
+			<img src="images/photo4.JPG" alt="Photo de profil" class="profile-photo" />
 			<div class="hero-text">
 				<h1>Elena Fontaine</h1>
         		<p>Web Developer & UX/UI Designer</p>
