@@ -130,3 +130,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".card.clickable").forEach(card => {
+        card.addEventListener("click", function () {
+            const url = this.getAttribute("data-url");
+            if (url) {
+                window.open(url, "_blank"); // Ouvre dans un nouvel onglet
+            }
+        });
+    });
+});
