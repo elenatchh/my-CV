@@ -140,3 +140,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const profilePhoto = document.querySelector(".profile-photo");
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+    modal.innerHTML = `<img src="${profilePhoto.src}" alt="Agrandissement de la photo de profil">`;
+    document.body.appendChild(modal);
+
+    // Ouvrir la modal au clic sur la photo
+    profilePhoto.addEventListener("click", function () {
+        modal.classList.add("show");
+    });
+
+    // Fermer la modal au clic sur l'image agrandie
+    modal.addEventListener("click", function () {
+        modal.classList.remove("show");
+    });
+});
