@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test PDF</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div id="pdf-content">
+    <h1>Mon CV</h1>
+    <p>Ceci est un test d'exportation en PDF.</p>
+  </div>
+  <button id="download-pdf">Télécharger en PDF</button>
+
+  <script>
+    document.getElementById("download-pdf").addEventListener("click", function () {
+      const element = document.getElementById("pdf-content");
+      const options = {
+          margin: 0.5,
+          filename: 'mon_cv.pdf',
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(options).from(element).save();
+    });
+  </script>
+</body>
+</html>
