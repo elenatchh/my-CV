@@ -334,3 +334,47 @@ section {
 .modal.show {
     display: flex;
 }
+/* Styles pour le menu ouvert */
+nav ul.open {
+    transform: translateX(0); /* Affiche le menu en le déplaçant à sa position d'origine */
+}
+
+/* Styles pour le bouton du menu en mode mobile */
+#menu-toggle {
+    display: none; /* Caché par défaut */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
+}
+
+/* Afficher le bouton du menu en mode mobile */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block; /* Affiche le bouton du menu en mode mobile */
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 200px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        transform: translateX(100%); /* Cache le menu par défaut */
+        transition: transform 0.3s ease-in-out; /* Animation pour l'ouverture/fermeture */
+    }
+
+    nav ul.open {
+        transform: translateX(0); /* Affiche le menu lorsqu'il est ouvert */
+    }
+}

@@ -1,21 +1,22 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Mode sombre
-//     const themeToggle = document.getElementById("theme-toggle");
-//     if (themeToggle) {
-//         themeToggle.addEventListener("click", function () {
-//             document.body.classList.toggle("dark-mode");
-//             themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-//         });
-//     }
+document.addEventListener("DOMContentLoaded", function () {
+    // Mode sombre
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle) {
+        themeToggle.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+            themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+        });
+    }
 
-//     // Menu burger
-//     const menuToggle = document.getElementById("menu-toggle");
-//     const navLinks = document.getElementById("nav-links");
-//     if (menuToggle && navLinks) {
-//         menuToggle.addEventListener("click", () => {
-//             navLinks.classList.toggle("open");
-//         });
-//     }
+// Menu burger
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open"); // Ajoute ou supprime la classe "open"
+    });
+}
 
 //     // Téléchargement du CV en PDF (sans la section Contact)
 //     const downloadCvButton = document.getElementById("download-pdf");
@@ -68,14 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Menu burger
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("open");
-        });
-    }
 
     // ✅ Téléchargement du CV en PDF (sans Contact)
     const downloadCvButton = document.getElementById("download-pdf");
